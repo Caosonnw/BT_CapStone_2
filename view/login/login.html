@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>REGISTER</title>
+    <title>LOGIN</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -30,8 +30,8 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
     />
-    <!-- css -->
-    <link rel="stylesheet" href="./../../assets/css/register.css" />
+    <!-- css  -->
+    <link rel="stylesheet" href="./../../assets/css/login.css" />
   </head>
 
   <body>
@@ -42,10 +42,10 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
-                <h4>Đăng ký</h4>
+                <h4>Đăng nhập</h4>
               </div>
               <div class="card-body">
-                <form id="registrationForm">
+                <form id="loginForm">
                   <div class="form-group">
                     <label for="email">Email:</label>
                     <input
@@ -70,51 +70,18 @@
                     />
                     <span class="sp_thongbao" id="tbPassWord"></span>
                   </div>
-                  <div class="form-group">
-                    <label for="name">Họ và tên:</label>
-                    <input
-                      placeholder="Nhập họ và tên"
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      name="name"
-                      required
-                    />
-                    <span class="sp_thongbao" id="tbName"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="gender">Giới tính:</label>
-                    <select
-                      class="form-control"
-                      id="gender"
-                      name="gender"
-                      required
-                    >
-                      <option>Chọn giới tính</option>
-                      <option value="true">Nam</option>
-                      <option value="false">Nữ</option>
-                    </select>
-                    <span class="sp_thongbao" id="tbGender"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="phone">Số điện thoại:</label>
-                    <input
-                      placeholder="Nhập số điện thoại"
-                      type="text"
-                      class="form-control"
-                      id="phone"
-                      name="phone"
-                      required
-                    />
-                    <span class="sp_thongbao" id="tbPhone"></span>
-                  </div>
-                  <span class="sp_dangnhapngay">Bạn đã là thành viên? <a href="./../login/login.html">Đăng nhập ngay!</a></span>
+                  <span class="sp_dangkyngay"
+                    >Bạn chưa có tài khoản?
+                    <a href="./../register/register.html"
+                      >Đăng ký ngay!</a
+                    ></span
+                  >
                   <button
-                    id="btn_register"
                     type="button"
                     class="btn btn-primary mt-3"
+                    id="btn_login"
                   >
-                    Đăng ký
+                    Đăng nhập
                   </button>
                 </form>
               </div>
@@ -150,6 +117,6 @@
     ></script>
     <!--  -->
     <script src="./../../validation/validation.js"></script>
-    <script src="./../../js/register.js"></script>
+    <script src="./../../js/login.js"></script>
   </body>
 </html>
