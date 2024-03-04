@@ -63,7 +63,8 @@
 #detail_Products .product_padding .product_header {
   margin: 8px 0;
 }
-#detail_Products .product_padding .product_header .color_title {
+#detail_Products .product_padding .product_header #selected-size {
+  margin-left: 3px;
   font-weight: 600;
 }
 #detail_Products .product_padding .product_header .product_huongDan #ButtonHD {
@@ -89,16 +90,30 @@
   background-repeat: no-repeat;
   background-image: url(../img/white_85768301007_a__2__a3b63b683c4349a2816283609cdc0cbe_medium.jpg);
 }
-#detail_Products .product_padding .product_size {
-  border-bottom: 1px solid #e6e6e6;
-  margin: 10px 0;
-  padding: 10px 0;
-  list-style: none;
-  display: flex;
+#detail_Products .product_padding form {
+  font-size: 13px;
+  font-weight: 400;
 }
-#detail_Products .product_padding .product_size .sizeValue {
-  padding: 10px 25px;
+#detail_Products .product_padding form .product_size {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 12px 0;
+}
+#detail_Products .product_padding form .product_size input {
+  display: none;
+}
+#detail_Products .product_padding form .product_size input:checked + span {
+  color: white;
+  background: black !important;
+  font-weight: 600;
+}
+#detail_Products .product_padding form .product_size span {
+  cursor: pointer;
   border: 1px solid black;
+  padding: 13px;
+}
+#detail_Products .product_padding form .product_size span:hover {
+  background: #777;
+  color: white;
 }
 #detail_Products .product_padding .product_themVaTim .btnThem {
   padding: 8px;
@@ -131,6 +146,28 @@
 }
 #detail_Products .product_padding .btnDiaChi i {
   margin-right: 10px;
+}
+#detail_Products .product_padding #addressModal .address_modal_select #address_province {
+  height: 40px;
+  border: 1px solid #f1f1f1;
+  background-color: #f1f1f1;
+}
+#detail_Products .product_padding #addressModal .modal-body .address_list .address_item {
+  margin-top: 10px;
+  border: 1px solid #f1f1f1;
+  padding: 15px;
+  line-height: 1.5;
+  background: #f7f7f7;
+  font-weight: 600;
+}
+#detail_Products .product_padding #addressModal .modal-body .address_list .address_item h6 {
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+#detail_Products .product_padding #addressModal .modal-body .address_list .address_item p {
+  margin: 0;
+  font-size: 14px;
 }
 #detail_Products .product_padding .product_text {
   margin-bottom: 20px;
@@ -232,4 +269,65 @@
 #different .different_items .different_item .different_content .different_price span {
   font-size: 14px;
   font-weight: 600;
+}
+
+#canCare {
+  padding-bottom: 50px;
+}
+#canCare .canCare_items .canCare_item {
+  width: 349px;
+  text-align: center;
+  padding: 20px;
+}
+#canCare .canCare_items .canCare_item:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#canCare .canCare_items .canCare_item .canCare_img a img {
+  width: 100%;
+}
+#canCare .canCare_items .canCare_item .canCare_content h2 a {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
+}
+#canCare .canCare_items .canCare_item .canCare_content .canCare_price span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#ganCuoi {
+  padding-bottom: 50px;
+}
+#ganCuoi .ganCuoi_items .ganCuoi_item {
+  width: 349px;
+  text-align: center;
+  padding: 20px;
+}
+#ganCuoi .ganCuoi_items .ganCuoi_item .ganCuoi_img a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+#ganCuoi .ganCuoi_items .ganCuoi_item .ganCuoi_img a:hover::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  opacity: 0.8;
+  z-index: 1;
+}
+#ganCuoi .ganCuoi_items .ganCuoi_item .ganCuoi_img a img {
+  border-radius: 6px;
+  width: 100%;
+}
+#ganCuoi .ganCuoi_items .ganCuoi_item .ganCuoi_content h2 a {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

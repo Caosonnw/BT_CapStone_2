@@ -24,22 +24,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- link owl carousel 2 -->
+
+    <!-- link slick css -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
     <!-- link main -->
+
     <link rel="stylesheet" href="../../assets/css/style.css" />
   </head>
 
@@ -47,7 +49,6 @@
     <section id="detail_Products">
       <div class="container">
         <div class="row">
-          <!-- Trang chủ > TẤT CẢ CÁC SẢN PHẨM > ECCO SOFT CLASSIC W -->
           <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
@@ -264,7 +265,7 @@
             <div class="product_img"></div>
             <div class="product_header d-flex">
               Kích thước:
-              <span class="size_title"> </span>
+              <p id="selected-size"></p>
               <div class="product_huongDan">
                 <button
                   class="btn btn-primary"
@@ -520,80 +521,35 @@
               </div>
             </div>
 
-            <ul class="product_size">
-              <li class="active">
-                <label class="sizeValue" for="size-35"
-                  ><input
-                    type="radio"
-                    name="size"
-                    value="35"
-                    id="size-35"
-                    class="visually-hidden"
-                  />
-                  35</label
-                >
-              </li>
-              <li>
-                <label class="sizeValue" for="size-36"
-                  ><input
-                    type="radio"
-                    name="size"
-                    value="36"
-                    id="size-36"
-                    class="visually-hidden"
-                  />
-                  36</label
-                >
-              </li>
-              <li>
-                <label class="sizeValue" for="size-37"
-                  ><input
-                    type="radio"
-                    name="size"
-                    value="37"
-                    id="size-37"
-                    class="visually-hidden"
-                  />
-                  37</label
-                >
-              </li>
-              <li>
-                <label class="sizeValue" for="size-38"
-                  ><input
-                    type="radio"
-                    name="size"
-                    value="38"
-                    id="size-38"
-                    class="visually-hidden"
-                  />
-                  38</label
-                >
-              </li>
-              <li>
-                <label class="sizeValue" for="size-39"
-                  ><input
-                    type="radio"
-                    name="size"
-                    value="39"
-                    id="size-39"
-                    class="visually-hidden"
-                  />
-                  39</label
-                >
-              </li>
-              <li>
-                <label class="sizeValue" for="size-40"
-                  ><input
-                    type="radio"
-                    name="size"
-                    value="40"
-                    id="size-40"
-                    class="visually-hidden"
-                  />
-                  40</label
-                >
-              </li>
-            </ul>
+            <form>
+              <div class="product_size">
+                <label for="size-35">
+                  <input type="radio" name="size" id="size-35" value="35" />
+                  <span>35</span>
+                </label>
+                <label for="size-36">
+                  <input type="radio" name="size" id="size-36" value="36" />
+                  <span>36</span>
+                </label>
+                <label for="size-37">
+                  <input type="radio" name="size" id="size-37" value="37" />
+                  <span>37</span>
+                </label>
+                <label for="size-38">
+                  <input type="radio" name="size" id="size-38" value="38" />
+                  <span>38</span>
+                </label>
+                <label for="size-39">
+                  <input type="radio" name="size" id="size-39" value="39" />
+                  <span>39</span>
+                </label>
+                <label for="size-40">
+                  <input type="radio" name="size" id="size-40" value="40" />
+                  <span>40</span>
+                </label>
+              </div>
+            </form>
+
             <div class="product_maSP">
               <span id="maSP">Mã SP: 8576830100735241</span>
             </div>
@@ -607,10 +563,126 @@
                 </div>
               </a>
             </div>
-            <button class="btnDiaChi">
+            <button
+              class="btnDiaChi"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#addressModal"
+            >
               <i class="fa-solid fa-location-dot"></i>Sản phẩm hiện đang có tại
               cửa hàng
             </button>
+            <!--  modal của button địa chỉ-->
+            <!-- Button trigger modal -->
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="addressModal"
+              tabindex="-1"
+              aria-labelledby="addressModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="addressModalLabel">
+                      Tìm tại cửa hàng
+                    </h2>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="address_modal_select">
+                    <select
+                      class="form-select form-select-lg"
+                      name=""
+                      id="address_province"
+                    >
+                      <option value="all">Chọn tỉnh/thành phố</option>
+                      <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                      <option value="Đồng Nai">Đồng Nai</option>
+                      <option value="Hà Nội">Hà Nội</option>
+                    </select>
+                  </div>
+                  <div class="modal-body">
+                    <div class="address_list">
+                      <div class="address_item">
+                        <h6>Vincom Thảo Điền</h6>
+                        <p>
+                          161 Xa lộ Hà Nội, Phường Thảo Điền, Thành phố Thủ Đức,
+                          Hồ Chí Minh
+                        </p>
+                        <p>Điện thoại: 0919790816</p>
+                      </div>
+                      <div class="address_item">
+                        <h6>Diamond Plaza</h6>
+                        <p>34 Lê Duẩn, Phường Bến Nghé, Quận 1, Hồ Chí Minh</p>
+                        <p>Điện thoại: 0902543993</p>
+                      </div>
+                      <div class="address_item">
+                        <h6>Vạn Hạnh Mall</h6>
+                        <p>11 Sư Vạn Hạnh, Phường 12, Quận 10, Hồ Chí Minh</p>
+                        <p>Điện thoại: 0919394411</p>
+                      </div>
+                      <div class="address_item">
+                        <h6>Vincom Biên Hòa</h6>
+                        <p>
+                          Vincom Biên Hòa, Tầng 1, Gian hàng 01, 1096 Phạm Văn
+                          Thuận, Phường Tân Mai, Thành phố Biên Hòa, Đồng Nai
+                        </p>
+                        <p>Điện thoại: 0919390835</p>
+                      </div>
+                      <div class="address_item">
+                        <h6>SC VivoCity</h6>
+                        <p>
+                          SC VivoCity, Tầng trệt, Gian hàng 01-31, 1058 Đại Lộ
+                          Nguyễn Văn Linh, Phường Tân Phong, Quận 7, Hồ Chí Minh
+                        </p>
+                        <p>Điện thoại: 0919390594</p>
+                      </div>
+                      <div class="address_item">
+                        <h6>Tràng Tiền Plaza</h6>
+                        <p>
+                          Tràng Tiền Plaza, Tầng 4, Gian hàng L4-06, 24 Hai Bà
+                          Trưng, Phường Tràng Tiền, Quận Hoàn Kiếm, Hà Nội
+                        </p>
+                        <p>Điện thoại: 02439392510</p>
+                      </div>
+                      <div class="address_item">
+                        <h6>Vincom Trần Duy Hưng</h6>
+                        <p>
+                          Vincom Trần Duy Hưng, Tầng 1, Gian hàng L1.11A, 119
+                          Trần Duy Hưng, Phường Trung Hoà, Quận Cầu Giấy, Hà Nội
+                        </p>
+                        <p>Điện thoại: 02466587218</p>
+                      </div>
+                      <div class="address_item">
+                        <h6>AEON BÌNH TÂN</h6>
+                        <p>
+                          Aeon Mall Bình Tân, Tầng trệt, Gian hàng G12-B, 1
+                          Đường Số 17A, Phường Bình Trị Đông B, Quận Bình Tân,
+                          Hồ Chí Minh
+                        </p>
+                        <p>Điện thoại: 0919391874</p>
+                      </div>
+                      <div class="address_item">
+                        <h6>Hùng Vương Plaza</h6>
+                        <p>
+                          26 Đ. Hồng Bàng, Phường 12, Quận 5, Thành phố Hồ Chí
+                          Minh, Phường 12, Quận 5, Hồ Chí Minh
+                        </p>
+                        <p>Điện thoại: 0919390561</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
             <div class="product_text">
               <h5>CHÍNH SÁCH ĐỔI HÀNG/ BẢO HÀNH</h5>
               <span
@@ -1004,235 +1076,216 @@
     <section id="different">
       <div class="container">
         <h2 class="text-center fs-5">SẢN PHẨM KHÁC</h2>
-        <div class="different_items">
-          <div class="owl-carousel owl-theme">
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/white_85768301007_a__2__a3b63b683c4349a2816283609cdc0cbe_medium.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W "
-                      >ECCO SOFT CLASSIC W
-                    </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>4,790,000₫</span>
-                  </div>
-                </div>
+        <div class="different_items your-class">
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/white_85768301007_a__2__a3b63b683c4349a2816283609cdc0cbe_medium.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W "
+                  >ECCO SOFT CLASSIC W
+                </a>
+              </h2>
+              <div class="different_price">
+                <span>4,790,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/black_85768301001_a__2__42809bf82a46417eb0e6ef31b6055b24_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W "
-                      >ECCO SOFT CLASSIC W
-                    </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>4,790,000₫</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
 
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/black_82019451052_a__2__9b784c968df64c75bed5a0378c11a22a_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W ">ECCO MX M </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>5,290,000₫</span>
-                  </div>
-                </div>
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/black_85768301001_a__2__42809bf82a46417eb0e6ef31b6055b24_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W "
+                  >ECCO SOFT CLASSIC W
+                </a>
+              </h2>
+              <div class="different_price">
+                <span>4,790,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/black_50017401001_a__2__c424d92a9b7d47d8af9d2b88db97e638_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W "
-                      >ECCO HELSINKI 2 M
-                    </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>5,190,000₫</span>
-                  </div>
-                </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/black_82019451052_a__2__9b784c968df64c75bed5a0378c11a22a_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO MX M </a>
+              </h2>
+              <div class="different_price">
+                <span>5,290,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/brown_21920301084_a__1__b5b4efcec75948d3adce7fff07ece47c_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 7 W </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>5,590,000₫</span>
-                  </div>
-                </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/black_50017401001_a__2__c424d92a9b7d47d8af9d2b88db97e638_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO HELSINKI 2 M </a>
+              </h2>
+              <div class="different_price">
+                <span>5,190,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/white_43000301007_a__1__c0426cdd3e5d47428515173062168aff_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 7 W </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>5,390,000₫</span>
-                  </div>
-                </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/brown_21920301084_a__1__b5b4efcec75948d3adce7fff07ece47c_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 7 W </a>
+              </h2>
+              <div class="different_price">
+                <span>5,590,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/black_43000301001_a__1__9d4ad8e551ae44ba8e81cd5e59bef45e_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 7 W </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>5,390,000₫</span>
-                  </div>
-                </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/white_43000301007_a__1__c0426cdd3e5d47428515173062168aff_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 7 W </a>
+              </h2>
+              <div class="different_price">
+                <span>5,390,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/black_23020301001_a__1__a5db907bad9a4489b198e0b4ce7a558c_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W "
-                      >ECCO SCULPTURED 45
-                    </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>4,390,000₫</span>
-                  </div>
-                </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/black_43000301001_a__1__9d4ad8e551ae44ba8e81cd5e59bef45e_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 7 W </a>
+              </h2>
+              <div class="different_price">
+                <span>5,390,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/green_21920301579_a__3__101a9d2ae898465bb47500d1399223ac_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 60 W </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>6,590,000₫</span>
-                  </div>
-                </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/black_23020301001_a__1__a5db907bad9a4489b198e0b4ce7a558c_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SCULPTURED 45 </a>
+              </h2>
+              <div class="different_price">
+                <span>4,390,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/brown_21920301084_a__1__b5b4efcec75948d3adce7fff07ece47c_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 60 W </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>6,590,000₫</span>
-                  </div>
-                </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/green_21920301579_a__3__101a9d2ae898465bb47500d1399223ac_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 60 W </a>
+              </h2>
+              <div class="different_price">
+                <span>6,590,000₫</span>
               </div>
             </div>
-            <div class="item">
-              <div class="different_item">
-                <div class="different_img">
-                  <a href="#">
-                    <img
-                      src="../../assets/img/limestone_21820360720_a__2__56b8e4a7a8e74522a552b16494b19fb9_large.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="different_content">
-                  <h2>
-                    <a href="#" title="ECCO SOFT CLASSIC W ">ECCO GRUUV W </a>
-                  </h2>
-                  <div class="different_price">
-                    <span>5,590,000₫</span>
-                  </div>
-                </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/brown_21920301084_a__1__b5b4efcec75948d3adce7fff07ece47c_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO SOFT 60 W </a>
+              </h2>
+              <div class="different_price">
+                <span>6,590,000₫</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="different_item">
+            <div class="different_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/limestone_21820360720_a__2__56b8e4a7a8e74522a552b16494b19fb9_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="different_content">
+              <h2>
+                <a href="#" title="ECCO SOFT CLASSIC W ">ECCO GRUUV W </a>
+              </h2>
+              <div class="different_price">
+                <span>5,590,000₫</span>
               </div>
             </div>
           </div>
@@ -1240,8 +1293,142 @@
       </div>
     </section>
     <section id="canCare">
-      <div class="container"></div>
+      <div class="container">
+        <h2 class="text-center fs-5">CLEAN, CARE & PROTECT</h2>
+        <div class="canCare_items CLEAR-class">
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/transparent_904011200100_shoe_care_ecco__1__4e6d852fd3ac483a96d8686bd9feaf3f_large.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO WAX OIL">ECCO WAX OIL</a>
+              </h2>
+              <div class="canCare_price">
+                <span>490,000₫</span>
+              </div>
+            </div>
+          </div>
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/transparent_904012900100_cham_soc_giay__1__d29554cee0b148b296d83e8414e8be65_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO TRAVEL KIT">ECCO TRAVEL KIT</a>
+              </h2>
+              <div class="canCare_price">
+                <span>1,190,000₫</span>
+              </div>
+            </div>
+          </div>
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/transparent_904014000100_cham_soc_giay__1__706abf318f1544ef901ce09742f5ab2b_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO SUEDE & NUBUCK CARE KIT"
+                  >ECCO SUEDE & NUBUCK CARE KIT</a
+                >
+              </h2>
+              <div class="canCare_price">
+                <span>1,090,000₫</span>
+              </div>
+            </div>
+          </div>
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/transparent_904010200100_shoe_care_ecco_86dcd469f9f846bdb94167dd2f90be32_large.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO SOLE CLEANING KIT "
+                  >ECCO SOLE CLEANING KIT
+                </a>
+              </h2>
+              <div class="canCare_price">
+                <span>1,150,000₫</span>
+              </div>
+            </div>
+          </div>
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/amber_904010990296_cham_soc_giay__2__028a137580a24479a8e479aba21aaa3e_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO SOLE CLEANER ">ECCO SOLE CLEANER </a>
+              </h2>
+              <div class="canCare_price">
+                <span>790,000₫</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    <section id="ganCuoi">
+      <div class="container">
+        <h2 class="fs-5">Bạn có thể quan tâm</h2>
+        <div class="ganCuoi_items ganCuoi-class">
+          <div class="ganCuoi_item">
+            <div class="ganCuoi_img">
+              <a href="#">
+                <img src="../../assets/img/feedback-type1-1.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="ganCuoi_item">
+            <div class="ganCuoi_img">
+              <a href="#">
+                <img src="../../assets/img/feedback-type1-2.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="ganCuoi_item">
+            <div class="ganCuoi_img">
+              <a href="#">
+                <img src="../../assets/img/feedback-type1-3.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="ganCuoi_item">
+            <div class="ganCuoi_img">
+              <a href="#">
+                <img src="../../assets/img/feedback-type1-4.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -1254,39 +1441,59 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- jquery owl carousel 2-->
+    <!-- jquery slick -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA=="
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <!-- js owl carousel 2 -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"
+      integrity="sha512-KgffulL3mxrOsDicgQWA11O6q6oKeWcV00VxgfJw4TcM8XRQT8Df9EsrYxDf7tpVpfl3qcYD96BpyPvA4d1FDQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- js slick -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 5,
-          },
-        },
+      $(document).ready(function () {
+        $(".your-class").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        });
       });
     </script>
+    <script>
+      $(document).ready(function () {
+        $(".CLEAR-class").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".ganCuoi-class").slick({
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        });
+      });
+    </script>
+    <!-- axios  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+      integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- js main -->
     <script src="../../js/detail.js"></script>
   </body>
 </html>
