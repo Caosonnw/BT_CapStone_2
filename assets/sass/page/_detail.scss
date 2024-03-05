@@ -1,4 +1,5 @@
 $breadcrumb-divider: quote(">");
+
 #detail_Products {
   .breadcrumb {
     .breadcrumb-item {
@@ -108,17 +109,7 @@ $breadcrumb-divider: quote(">");
       background-repeat: no-repeat;
       background-image: url(../img/white_85768301007_a__2__a3b63b683c4349a2816283609cdc0cbe_medium.jpg);
     }
-    // .product_size {
-    //   border-bottom: 1px solid #e6e6e6;
-    //   margin: 10px 0;
-    //   padding: 10px 0;
-    //   list-style: none;
-    //   display: flex;
-    //   .sizeValue {
-    //     padding: 10px 25px;
-    //     border: 1px solid black;
-    //   }
-    // }
+
     form {
       font-size: 13px;
       font-weight: 400;
@@ -184,9 +175,10 @@ $breadcrumb-divider: quote(">");
     #addressModal {
       .address_modal_select {
         #address_province {
-          height: 40px;
+          height: 50px;
           border: 1px solid #f1f1f1;
           background-color: #f1f1f1;
+          border-radius: none;
         }
       }
       .modal-body {
@@ -228,6 +220,9 @@ $breadcrumb-divider: quote(">");
     .accordion {
       font-weight: 600;
       font-size: 14px;
+      a {
+        text-decoration: none;
+      }
       button {
         font-weight: 600;
       }
@@ -411,6 +406,233 @@ $breadcrumb-divider: quote(">");
             color: black;
             text-decoration: none;
           }
+        }
+      }
+    }
+  }
+}
+
+//responsive media queries
+@media (min-width: 0px) and (max-width: 576px) {
+  #detail_Products {
+    .product_padding {
+      .product_promotion {
+        button {
+          padding: 1px 30px;
+        }
+      }
+      .product_header {
+        .product_huongDan {
+          #ButtonHD {
+            right: 0;
+          }
+          #offcanvasRight {
+            .offcanvas-header {
+              .offcanvas-title {
+                font-size: 16px;
+              }
+            }
+            .offcanvas-body {
+              font-size: 9px;
+              #myTabContent {
+                font-size: 14px;
+                .hinhAnhVaChu {
+                  display: block !important;
+                  img {
+                    max-width: 100%;
+                  }
+                }
+                .anhVaHuongDan {
+                  img {
+                    max-width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .product_themVaTim {
+        .btnThem {
+          width: 82%;
+        }
+      }
+    }
+  }
+  #free ul {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  #detail_Products {
+    .product_padding {
+      .product_promotion {
+        button {
+          padding: 1px 15px;
+        }
+      }
+      .product_header {
+        .product_huongDan {
+          #ButtonHD {
+            right: 50px;
+          }
+          #offcanvasRight {
+            .offcanvas-header {
+              .offcanvas-title {
+                font-size: 16px;
+              }
+            }
+            .offcanvas-body {
+              font-size: 16px;
+              #myTabContent {
+                font-size: 16px;
+                .hinhAnhVaChu {
+                  display: block !important;
+                  img {
+                    max-width: 100%;
+                  }
+                }
+                .anhVaHuongDan {
+                  img {
+                    max-width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .product_themVaTim {
+        .btnThem {
+          width: 88%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #detail_Products {
+    .product_padding {
+      .product_header {
+        #offcanvasRight {
+          .offcanvas-body {
+            #myTabContent {
+              .hinhAnhVaChu {
+                display: block !important;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      .product_themVaTim {
+        .btnThem {
+          width: 92%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #detail_Products {
+    .product_padding {
+      .product_promotion {
+        button {
+          padding: 1px 30px;
+        }
+      }
+      .product_header {
+        .product_huongDan {
+          #ButtonHD {
+            right: 5px;
+          }
+        }
+      }
+      .product_themVaTim {
+        .btnThem {
+          width: 83%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #detail_Products {
+    .product_padding {
+      .product_promotion {
+        button {
+          padding: 1px 15px;
+        }
+      }
+      .product_header {
+        .product_huongDan {
+          #ButtonHD {
+            right: 50px;
+          }
+          #offcanvasRight {
+            .offcanvas-body {
+              #myTabContent {
+                .hinhAnhVaChu {
+                  display: block !important;
+                  img {
+                    max-width: 100%;
+                  }
+                }
+                .anhVaHuongDan {
+                  img {
+                    max-width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .product_themVaTim {
+        .btnThem {
+          width: 86%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  #detail_Products {
+    .product_padding {
+      .product_promotion {
+        button {
+          padding: 1px 20px;
+        }
+      }
+      .product_header {
+        .product_huongDan {
+          #ButtonHD {
+            right: 30px;
+          }
+          #offcanvasRight {
+            .offcanvas-body {
+              #myTabContent {
+                .hinhAnhVaChu {
+                  display: block !important;
+                  img {
+                    max-width: 100%;
+                  }
+                }
+                .anhVaHuongDan {
+                  img {
+                    max-width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .product_themVaTim {
+        .btnThem {
+          width: 86%;
         }
       }
     }

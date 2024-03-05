@@ -148,9 +148,10 @@
   margin-right: 10px;
 }
 #detail_Products .product_padding #addressModal .address_modal_select #address_province {
-  height: 40px;
+  height: 50px;
   border: 1px solid #f1f1f1;
   background-color: #f1f1f1;
+  border-radius: none;
 }
 #detail_Products .product_padding #addressModal .modal-body .address_list .address_item {
   margin-top: 10px;
@@ -186,6 +187,9 @@
 #detail_Products .product_padding .accordion {
   font-weight: 600;
   font-size: 14px;
+}
+#detail_Products .product_padding .accordion a {
+  text-decoration: none;
 }
 #detail_Products .product_padding .accordion button {
   font-weight: 600;
@@ -330,4 +334,126 @@
   font-weight: 400;
   color: black;
   text-decoration: none;
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  #detail_Products .product_padding .product_promotion button {
+    padding: 1px 30px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #ButtonHD {
+    right: 0;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-header .offcanvas-title {
+    font-size: 16px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body {
+    font-size: 9px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent {
+    font-size: 14px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu {
+    display: block !important;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu img {
+    max-width: 100%;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .anhVaHuongDan img {
+    max-width: 100%;
+  }
+  #detail_Products .product_padding .product_themVaTim .btnThem {
+    width: 82%;
+  }
+  #free ul {
+    display: block;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  #detail_Products .product_padding .product_promotion button {
+    padding: 1px 15px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #ButtonHD {
+    right: 50px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-header .offcanvas-title {
+    font-size: 16px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body {
+    font-size: 16px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent {
+    font-size: 16px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu {
+    display: block !important;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu img {
+    max-width: 100%;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .anhVaHuongDan img {
+    max-width: 100%;
+  }
+  #detail_Products .product_padding .product_themVaTim .btnThem {
+    width: 88%;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #detail_Products .product_padding .product_header #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu {
+    display: block !important;
+    text-align: center;
+  }
+  #detail_Products .product_padding .product_themVaTim .btnThem {
+    width: 92%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  #detail_Products .product_padding .product_promotion button {
+    padding: 1px 30px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #ButtonHD {
+    right: 5px;
+  }
+  #detail_Products .product_padding .product_themVaTim .btnThem {
+    width: 83%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #detail_Products .product_padding .product_promotion button {
+    padding: 1px 15px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #ButtonHD {
+    right: 50px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu {
+    display: block !important;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu img {
+    max-width: 100%;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .anhVaHuongDan img {
+    max-width: 100%;
+  }
+  #detail_Products .product_padding .product_themVaTim .btnThem {
+    width: 86%;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  #detail_Products .product_padding .product_promotion button {
+    padding: 1px 20px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #ButtonHD {
+    right: 30px;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu {
+    display: block !important;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu img {
+    max-width: 100%;
+  }
+  #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body #myTabContent .anhVaHuongDan img {
+    max-width: 100%;
+  }
+  #detail_Products .product_padding .product_themVaTim .btnThem {
+    width: 86%;
+  }
 }/*# sourceMappingURL=style.css.map */

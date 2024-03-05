@@ -59,7 +59,7 @@
           </nav>
         </div>
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-lg-8 col-sm-12">
             <!-- carousel -->
             <div
               id="carouselExampleIndicators"
@@ -598,6 +598,7 @@
                   </div>
                   <div class="address_modal_select">
                     <select
+                      onclick="filterAddresses()"
                       class="form-select form-select-lg"
                       name=""
                       id="address_province"
@@ -610,7 +611,7 @@
                   </div>
                   <div class="modal-body">
                     <div class="address_list">
-                      <div class="address_item">
+                      <div class="address_item" data-province="Hồ Chí Minh">
                         <h6>Vincom Thảo Điền</h6>
                         <p>
                           161 Xa lộ Hà Nội, Phường Thảo Điền, Thành phố Thủ Đức,
@@ -618,17 +619,17 @@
                         </p>
                         <p>Điện thoại: 0919790816</p>
                       </div>
-                      <div class="address_item">
+                      <div class="address_item" data-province="Hồ Chí Minh">
                         <h6>Diamond Plaza</h6>
                         <p>34 Lê Duẩn, Phường Bến Nghé, Quận 1, Hồ Chí Minh</p>
                         <p>Điện thoại: 0902543993</p>
                       </div>
-                      <div class="address_item">
+                      <div class="address_item" data-province="Hồ Chí Minh">
                         <h6>Vạn Hạnh Mall</h6>
                         <p>11 Sư Vạn Hạnh, Phường 12, Quận 10, Hồ Chí Minh</p>
                         <p>Điện thoại: 0919394411</p>
                       </div>
-                      <div class="address_item">
+                      <div class="address_item" data-province="Đồng Nai">
                         <h6>Vincom Biên Hòa</h6>
                         <p>
                           Vincom Biên Hòa, Tầng 1, Gian hàng 01, 1096 Phạm Văn
@@ -636,7 +637,7 @@
                         </p>
                         <p>Điện thoại: 0919390835</p>
                       </div>
-                      <div class="address_item">
+                      <div class="address_item" data-province="Hồ Chí Minh">
                         <h6>SC VivoCity</h6>
                         <p>
                           SC VivoCity, Tầng trệt, Gian hàng 01-31, 1058 Đại Lộ
@@ -644,7 +645,7 @@
                         </p>
                         <p>Điện thoại: 0919390594</p>
                       </div>
-                      <div class="address_item">
+                      <div class="address_item" data-province="Hà Nội">
                         <h6>Tràng Tiền Plaza</h6>
                         <p>
                           Tràng Tiền Plaza, Tầng 4, Gian hàng L4-06, 24 Hai Bà
@@ -652,7 +653,7 @@
                         </p>
                         <p>Điện thoại: 02439392510</p>
                       </div>
-                      <div class="address_item">
+                      <div class="address_item" data-province="Hà Nội">
                         <h6>Vincom Trần Duy Hưng</h6>
                         <p>
                           Vincom Trần Duy Hưng, Tầng 1, Gian hàng L1.11A, 119
@@ -660,7 +661,7 @@
                         </p>
                         <p>Điện thoại: 02466587218</p>
                       </div>
-                      <div class="address_item">
+                      <div class="address_item" data-province="Hồ Chí Minh">
                         <h6>AEON BÌNH TÂN</h6>
                         <p>
                           Aeon Mall Bình Tân, Tầng trệt, Gian hàng G12-B, 1
@@ -669,7 +670,7 @@
                         </p>
                         <p>Điện thoại: 0919391874</p>
                       </div>
-                      <div class="address_item">
+                      <div class="address_item" data-province="Hồ Chí Minh">
                         <h6>Hùng Vương Plaza</h6>
                         <p>
                           26 Đ. Hồng Bàng, Phường 12, Quận 5, Thành phố Hồ Chí
@@ -820,16 +821,18 @@
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseThree"
-                  >
-                    CLEAN, CLEAR & PROTECT
-                  </button>
+                  <a href="#canCare">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                    >
+                      CLEAN, CLEAR & PROTECT
+                    </button>
+                  </a>
                 </h2>
               </div>
             </div>
@@ -1395,7 +1398,7 @@
     </section>
     <section id="ganCuoi">
       <div class="container">
-        <h2 class="fs-5">Bạn có thể quan tâm</h2>
+        <h2 class="fs-5 ms-4">Bạn có thể quan tâm</h2>
         <div class="ganCuoi_items ganCuoi-class">
           <div class="ganCuoi_item">
             <div class="ganCuoi_img">
@@ -1467,6 +1470,29 @@
         $(".your-class").slick({
           slidesToShow: 4,
           slidesToScroll: 4,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
         });
       });
     </script>
@@ -1475,6 +1501,29 @@
         $(".CLEAR-class").slick({
           slidesToShow: 4,
           slidesToScroll: 4,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
         });
       });
     </script>
@@ -1483,6 +1532,29 @@
         $(".ganCuoi-class").slick({
           slidesToShow: 4,
           slidesToScroll: 4,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+          ],
         });
       });
     </script>
