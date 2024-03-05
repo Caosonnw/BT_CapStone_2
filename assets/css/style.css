@@ -253,24 +253,24 @@
 #different {
   padding-bottom: 50px;
 }
-#different .different_items .different_item {
+#different .different_items .different_item1 {
   width: 349px;
   text-align: center;
   padding: 20px;
 }
-#different .different_items .different_item:hover {
+#different .different_items .different_item1:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-#different .different_items .different_item .different_img a img {
+#different .different_items .different_item1 .different_img a img {
   width: 100%;
 }
-#different .different_items .different_item .different_content h2 a {
+#different .different_items .different_item1 .different_content h2 a {
   font-size: 18px;
   font-weight: 400;
   color: black;
   text-decoration: none;
 }
-#different .different_items .different_item .different_content .different_price span {
+#different .different_items .different_item1 .different_content .different_price span {
   font-size: 14px;
   font-weight: 600;
 }
@@ -461,4 +461,9 @@
   #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu img {
     max-width: 100%;
   }
+}
+.slick-slide img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=style.css.map */

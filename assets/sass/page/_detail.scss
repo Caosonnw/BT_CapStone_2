@@ -297,7 +297,7 @@ $breadcrumb-divider: quote(">");
 #different {
   padding-bottom: 50px;
   .different_items {
-    .different_item {
+    .different_item1 {
       width: 349px;
       text-align: center;
       padding: 20px;
@@ -646,4 +646,9 @@ $breadcrumb-divider: quote(">");
       }
     }
   }
+}
+
+.slick-slide img {
+  width: 100%;
+  object-fit: contain;
 }
