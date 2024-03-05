@@ -5,6 +5,7 @@ const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 
+//chọn size
 let radioButtons = document.querySelectorAll('input[name="size"]');
 radioButtons.forEach(function (radioButton) {
   radioButton.addEventListener("click", function () {
@@ -13,6 +14,21 @@ radioButtons.forEach(function (radioButton) {
   });
 });
 
+//validation button giỏ hàng
+function validateSizeSelection() {
+  let selectedSize = document.querySelector('input[name="size"]:checked');
+
+  if (selectedSize === null) {
+    document.getElementById("selected-size").innerHTML = "Bạn chưa chọn size";
+    return false;
+  } else {
+    //Bỏ vô hàm giỏ hàng: chú ý: chưa có hàm này
+    return true;
+  }
+}
+document.querySelector(".btnThem").onclick = validateSizeSelection;
+
+//filter địa chỉ tỉnh có trong modal
 function filterAddresses() {
   var selectElement = document.getElementById("address_province");
   var selectedProvince = selectElement.value;
