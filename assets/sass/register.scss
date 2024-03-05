@@ -1,0 +1,88 @@
+// import
+@import './base/reset';
+@import './hepler/variable';
+
+// content
+.content {
+  .card {
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  h4{
+    text-decoration: underline;
+    text-align: center;
+  }
+  .card-header {
+    background-color: $color_black;
+    color: $color_white;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 0;
+  }
+  .form-control {
+    &:focus {
+      border-color: inherit;
+      box-shadow: none;
+    };
+    &:focus:not(:focus-visible) {
+      border-color: inherit;
+      box-shadow: none;
+    }
+  }
+  .card-body {
+    padding: 20px;
+
+    .form-group {
+      margin-bottom: 20px;
+      &:focus-within {
+        .form-control {
+          border-color: inherit;
+          box-shadow: none;
+        }
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="email"],
+      input[type="password"],
+      input[type="text"],
+      select {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .sp_thongbao {
+        color: $color_sp_thongbao;
+        font-size: 15px;
+      }
+    }
+
+    .sp_dangnhapngay{
+      font-size: 15px;
+      a {
+        color: $color_blue;
+      }
+    }
+
+    button#btn_register {
+      background-color: $color_black;
+      color: $color_white;
+      border: none;
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all background-color 0.3s;
+
+      &:hover {
+        background-color: $color_brown;
+        border-color: $color_brown;
+      }
+    }
+  }
+}

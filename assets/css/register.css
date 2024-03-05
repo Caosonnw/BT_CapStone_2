@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content .card {
+  border: 0px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.content h4 {
+  text-decoration: underline;
+  text-align: center;
+}
+.content .card-header {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 0;
+}
+.content .form-control:focus {
+  border-color: inherit;
+  box-shadow: none;
+}
+.content .form-control:focus:not(:focus-visible) {
+  border-color: inherit;
+  box-shadow: none;
+}
+.content .card-body {
+  padding: 20px;
+}
+.content .card-body .form-group {
+  margin-bottom: 20px;
+}
+.content .card-body .form-group:focus-within .form-control {
+  border-color: inherit;
+  box-shadow: none;
+}
+.content .card-body .form-group label {
+  font-weight: bold;
+}
+.content .card-body .form-group input[type=email],
+.content .card-body .form-group input[type=password],
+.content .card-body .form-group input[type=text],
+.content .card-body .form-group select {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.content .card-body .form-group .sp_thongbao {
+  color: #dc3545;
+  font-size: 15px;
+}
+.content .card-body .sp_dangnhapngay {
+  font-size: 15px;
+}
+.content .card-body .sp_dangnhapngay a {
+  color: #007bff;
+}
+.content .card-body button#btn_register {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all background-color 0.3s;
+}
+.content .card-body button#btn_register:hover {
+  background-color: #494949;
+  border-color: #494949;
+}/*# sourceMappingURL=register.css.map */
