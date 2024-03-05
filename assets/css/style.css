@@ -403,7 +403,7 @@
     text-align: center;
   }
   #detail_Products .product_padding .product_themVaTim .btnThem {
-    width: 92%;
+    width: 92% !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -454,6 +454,14 @@
     max-width: 100%;
   }
   #detail_Products .product_padding .product_themVaTim .btnThem {
-    width: 86%;
+    width: 90%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu {
+    display: block !important;
+  }
+  #offcanvasRight .offcanvas-body #myTabContent .hinhAnhVaChu img {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

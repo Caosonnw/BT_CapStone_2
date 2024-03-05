@@ -528,7 +528,7 @@ $breadcrumb-divider: quote(">");
       }
       .product_themVaTim {
         .btnThem {
-          width: 92%;
+          width: 92% !important;
         }
       }
     }
@@ -632,7 +632,21 @@ $breadcrumb-divider: quote(">");
       }
       .product_themVaTim {
         .btnThem {
-          width: 86%;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #offcanvasRight {
+    .offcanvas-body {
+      #myTabContent {
+        .hinhAnhVaChu {
+          display: block !important;
+          img {
+            max-width: 100%;
+          }
         }
       }
     }
