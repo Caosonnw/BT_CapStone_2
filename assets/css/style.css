@@ -82,13 +82,12 @@
 #detail_Products .product_padding .product_header .product_huongDan #offcanvasRight .offcanvas-body .tabContent .tab-content .tab-pane p {
   font-size: 14px;
 }
-#detail_Products .product_padding .product_img {
+#detail_Products .product_padding .product_img img {
   height: 100px;
   width: 100px;
   border: 1px solid black;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url(../img/white_85768301007_a__2__a3b63b683c4349a2816283609cdc0cbe_medium.jpg);
 }
 #detail_Products .product_padding form {
   font-size: 13px;

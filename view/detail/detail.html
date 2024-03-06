@@ -260,11 +260,7 @@
                 </button>
               </div>
             </div>
-            <div class="product_header">
-              Màu sắc:
-              <span class="color_title">White</span>
-            </div>
-            <div class="product_img"></div>
+            <div class="product_img"><img id="productImage" alt="Product Image"></div>
             <div class="product_header d-flex">
               Kích thước:
               <p id="selected-size"></p>
@@ -1078,22 +1074,148 @@
         <!--  -->
       </div>
     </section>
-    <section id="different">
+    <section id="different" class="mb-3">
       <div class="container">
         <h2 class="text-center fs-5">SẢN PHẨM KHÁC</h2>
-        <div class="different_items your-class"></div>
-      </div>
+        <div class="different_items your-class">
+          <!-- <div class="your-slick-carousel" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+          </div> -->
+        </div>
     </section>
     <section id="canCare">
       <div class="container">
         <h2 class="text-center fs-5">CLEAN, CARE & PROTECT</h2>
-        <div class="canCare_items CLEAR-class"></div>
+        <div class="canCare_items CLEAR-class">
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/transparent_904011200100_shoe_care_ecco__1__4e6d852fd3ac483a96d8686bd9feaf3f_large.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO WAX OIL">ECCO WAX OIL</a>
+              </h2>
+              <div class="canCare_price">
+                <span>490,000₫</span>
+              </div>
+            </div>
+          </div>
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/transparent_904012900100_cham_soc_giay__1__d29554cee0b148b296d83e8414e8be65_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO TRAVEL KIT">ECCO TRAVEL KIT</a>
+              </h2>
+              <div class="canCare_price">
+                <span>1,190,000₫</span>
+              </div>
+            </div>
+          </div>
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/transparent_904014000100_cham_soc_giay__1__706abf318f1544ef901ce09742f5ab2b_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO SUEDE & NUBUCK CARE KIT"
+                  >ECCO SUEDE & NUBUCK CARE KIT</a
+                >
+              </h2>
+              <div class="canCare_price">
+                <span>1,090,000₫</span>
+              </div>
+            </div>
+          </div>
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/transparent_904010200100_shoe_care_ecco_86dcd469f9f846bdb94167dd2f90be32_large.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO SOLE CLEANING KIT "
+                  >ECCO SOLE CLEANING KIT
+                </a>
+              </h2>
+              <div class="canCare_price">
+                <span>1,150,000₫</span>
+              </div>
+            </div>
+          </div>
+          <div class="canCare_item">
+            <div class="canCare_img">
+              <a href="#">
+                <img
+                  src="../../assets/img/amber_904010990296_cham_soc_giay__2__028a137580a24479a8e479aba21aaa3e_large.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="canCare_content">
+              <h2>
+                <a href="#" title="ECCO SOLE CLEANER ">ECCO SOLE CLEANER </a>
+              </h2>
+              <div class="canCare_price">
+                <span>790,000₫</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="ganCuoi">
       <div class="container">
         <h2 class="fs-5 ms-4">Bạn có thể quan tâm</h2>
-        <div class="ganCuoi_items ganCuoi-class"></div>
+        <div class="ganCuoi_items ganCuoi-class">
+          <div class="ganCuoi_item">
+            <div class="ganCuoi_img">
+              <a href="#">
+                <img src="../../assets/img/feedback-type1-1.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="ganCuoi_item">
+            <div class="ganCuoi_img">
+              <a href="#">
+                <img src="../../assets/img/feedback-type1-2.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="ganCuoi_item">
+            <div class="ganCuoi_img">
+              <a href="#">
+                <img src="../../assets/img/feedback-type1-3.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="ganCuoi_item">
+            <div class="ganCuoi_img">
+              <a href="#">
+                <img src="../../assets/img/feedback-type1-4.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1130,99 +1252,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script>
-      $(document).ready(function () {
-        $(".your-class").slick({
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-              },
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-          ],
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $(".CLEAR-class").slick({
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-              },
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-          ],
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $(".ganCuoi-class").slick({
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-              },
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-          ],
-        });
-      });
-    </script>
 
     <!-- axios  -->
     <script

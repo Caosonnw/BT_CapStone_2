@@ -101,13 +101,12 @@ $breadcrumb-divider: quote(">");
       }
     }
 
-    .product_img {
+    .product_img  img{
       height: 100px;
       width: 100px;
       border: 1px solid black;
       background-size: 100% 100%;
       background-repeat: no-repeat;
-      background-image: url(../img/white_85768301007_a__2__a3b63b683c4349a2816283609cdc0cbe_medium.jpg);
     }
 
     form {
@@ -293,7 +292,6 @@ $breadcrumb-divider: quote(">");
     }
   }
 }
-
 #different {
   padding-bottom: 50px;
   .different_items {
@@ -330,7 +328,6 @@ $breadcrumb-divider: quote(">");
     }
   }
 }
-
 #canCare {
   padding-bottom: 50px;
   .canCare_items {
