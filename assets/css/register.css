@@ -2,6 +2,203 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+header .header_topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #CC2027;
+  height: 46px;
+}
+header .header_topbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+header .navbar .logo img {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+}
+header .navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  margin-top: 16px;
+}
+header .navbar ul .branch .branch_menu {
+  margin: 0 14px;
+  padding: 25px 0;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+header .navbar ul .branch .level_2 {
+  display: none;
+}
+header .navbar ul .branch .level_2 img {
+  width: 100%;
+}
+header .navbar ul .branch .level_2 ul {
+  display: block;
+}
+header .navbar ul .branch .level_2 ul .active {
+  color: black;
+  font-weight: 700;
+}
+header .navbar ul .branch .level_2 ul a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+header .navbar ul .branch .level_2 li:hover a {
+  text-decoration: underline;
+}
+header .navbar ul .branch .level_2 .new_item {
+  padding: 10px;
+}
+header .navbar ul .branch .level_2 .new_item img {
+  width: 100%;
+}
+header .navbar ul .branch .level_2 .new_item:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header .navbar ul .branch .level_2 .level_3 {
+  padding-left: -100%;
+}
+header .navbar ul .branch .level_2 .phukien {
+  display: flex;
+}
+header .navbar ul .branch .level_2 .giay {
+  margin-right: 50px;
+}
+header .navbar ul .branch .level_2 .giay img {
+  width: 100%;
+}
+header .navbar ul .branch .level_2 .giay h6 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+header .navbar ul .branch .level_2 .giay .btn {
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0);
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+  margin-left: 20%;
+}
+header .navbar ul .branch .level_2 .giay .btn:hover {
+  background-color: rgba(0, 0, 0, 0.43);
+}
+header .navbar ul .branch:hover .level_2 {
+  display: block;
+  border: none;
+  margin-left: -10%;
+  margin-top: 20px;
+}
+header .navbar ul .branch:hover .level_2 .new_item {
+  margin: 0 20px;
+  padding: 10px;
+}
+header .navbar ul .branch:hover .level_2 .new_item p {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+}
+header .navbar .form_user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header .navbar .form_user .search {
+  display: flex;
+}
+header .navbar .form_user .search .btn {
+  margin-left: -42px;
+}
+header .navbar .form_user .user {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-right: 15px;
+}
+header .navbar .form_user .user li {
+  width: 20px;
+}
+header .navbar .form_user .user li a {
+  color: black;
+}
+
+footer h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+}
+footer .address a {
+  text-decoration: underline;
+  color: black;
+  font-size: 14px;
+}
+footer .address ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+footer .address ul a {
+  display: flex;
+  text-decoration: none;
+  font-size: 16px;
+}
+footer .address ul a i {
+  margin: 5px 5px 0 0;
+}
+footer .address .social ul {
+  display: flex;
+  justify-content: start;
+}
+footer .address .social ul a {
+  font-size: 16px;
+  padding-right: 10px;
+}
+footer .footer_content ul {
+  list-style: none;
+  padding: 0;
+}
+footer .footer_content ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+footer img {
+  width: 150px;
+}
+footer span {
+  font-size: 14px;
+}
+footer li:hover {
+  text-decoration: underline;
 }
 
 .content .card {
@@ -15,7 +212,7 @@
 }
 .content .card-header {
   background-color: #000000;
-  color: #ffffff;
+  color: white;
   border-radius: 10px 10px 0 0;
   border-bottom: 0;
 }
@@ -61,7 +258,7 @@
 }
 .content .card-body button#btn_register {
   background-color: #000000;
-  color: #ffffff;
+  color: white;
   border: none;
   width: 100%;
   padding: 12px 20px;

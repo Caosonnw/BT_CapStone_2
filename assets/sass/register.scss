@@ -1,6 +1,8 @@
 // import
-@import './base/reset';
-@import './hepler/variable';
+@import './base/_reset';
+@import './helper/_variable';
+@import "./layouts/_header.scss";
+@import "./layouts/_footer.scss";
 
 // content
 .content {

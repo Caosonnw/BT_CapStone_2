@@ -45,34 +45,68 @@ function filterAddresses() {
     }
   }
 }
-
 // async function hienThiChiTietGiay() {
 //   try {
-//     let url = new URLSearchParams(window.location.search);
-//     let id = url.get("id");
-//     console.log(id); // 1
-//     let resolve = await axios({
-//       url: `https://shop.cyberlearn.vn/api/Product?id=${id}`,
-//       method: "GET",
+//     const id = 12;
+//     const apiUrl = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`;
+//     const response = await fetch(apiUrl);
+//     const data = await response.json();
+
+//     const breadcrumbItem = document.querySelector(".breadcrumb-item.active");
+//     breadcrumbItem.textContent = data.content.name;
+
+//     document.querySelector(".product_title").textContent = data.content.name;
+//     document.querySelector(".product_price").textContent =
+//       data.content.price + ",000đ";
+
+//     const productImg = document.getElementById("productImage");
+//     productImg.src = data.content.image;
+//     productImg.alt = data.content.name;
+
+//     const sizeContainer = document.querySelector(".product_size");
+//     sizeContainer.innerHTML = "";
+
+//     data.content.size.forEach((size) => {
+//       const label = document.createElement("label");
+//       label.setAttribute("for", `size-${size}`);
+
+//       const input = document.createElement("input");
+//       input.setAttribute("type", "radio");
+//       input.setAttribute("name", "size");
+//       input.setAttribute("id", `size-${size}`);
+//       input.setAttribute("value", size);
+
+//       const span = document.createElement("span");
+//       span.textContent = size;
+
+//       label.appendChild(input);
+//       label.appendChild(span);
+
+//       sizeContainer.appendChild(label);
 //     });
-//     console.log(resolve);
-//     //mảng nhiều
+//     const carouselItems = document.querySelectorAll(
+//       ".carousel-inner .carousel-item img"
+//     );
+//     carouselItems.forEach((item, index) => {
+//       item.src = data.content.image;
+//       item.alt = `Giày Trắng ${index + 1}`;
+//     });
+//     const carouselIndicators = document.querySelectorAll(
+//       ".carousel-indicators button img"
+//     );
+//     carouselIndicators.forEach((indicator, index) => {
+//       indicator.src = data.content.image;
+//       indicator.alt = `Giày Trắng ${index + 1}`;
+//     });
 //   } catch (error) {
-//     console.log(error);
+//     console.error(error);
 //   }
-//   console.log(window.location.href); //http://127.0.0.1:5501/view/detail/detail.html?id=1
-//   let url2 = window.location.href;
-
-//   // window.location.href = "url2";
-
-//   // window.location.href = "https://www.google.com"; // cho người dùng chạy qua trang này
 // }
 // hienThiChiTietGiay();
 
-async function hienThiChiTietGiay() {
+async function hienThiChiTietGiay(productId) {
   try {
-    const id = 12;
-    const apiUrl = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`;
+    const apiUrl = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${productId}`;
     const response = await fetch(apiUrl);
     const data = await response.json();
 
@@ -108,6 +142,7 @@ async function hienThiChiTietGiay() {
 
       sizeContainer.appendChild(label);
     });
+
     const carouselItems = document.querySelectorAll(
       ".carousel-inner .carousel-item img"
     );
@@ -115,6 +150,7 @@ async function hienThiChiTietGiay() {
       item.src = data.content.image;
       item.alt = `Giày Trắng ${index + 1}`;
     });
+
     const carouselIndicators = document.querySelectorAll(
       ".carousel-indicators button img"
     );
@@ -126,7 +162,13 @@ async function hienThiChiTietGiay() {
     console.error(error);
   }
 }
-hienThiChiTietGiay();
+
+// Lấy id từ query parameter
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
+
+// Gọi hàm hiển thị chi tiết giày với id từ query parameter
+hienThiChiTietGiay(productId);
 
 
 function getAllGiay() {

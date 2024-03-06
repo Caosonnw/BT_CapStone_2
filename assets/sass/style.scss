@@ -1,2 +1,187 @@
 @import "./base/reset";
 @import "./page/detail";
+@import "./layouts/header";
+@import "./layouts/footer";
+
+// font-size:
+$fs_content: 18px;
+$fs_title: 16px;
+$fs_title_1: 14px;
+$fs_title_2: 20px;
+$fs_title_3: 15px;
+
+// font-weight:
+$fw_bold: 700;
+
+// color
+$color_balck: black;
+$color_white: white;
+$color_gray: gray;
+$color_red: #CC2027;
+
+
+
+.carousel {
+    text-align: center;
+    font-weight: $fw_bold;
+    position: relative;
+    img {
+        width: 100%;
+    };
+    h3 {
+        font-size: 48px;
+    };
+    p {
+        font-size: 28px;
+    };
+    .carousel_content {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        .btn {
+            padding: 10px 20px;
+            background-color: rgb(0, 0, 0);
+            font-weight: $fw_bold;
+        };
+        .btn:hover {
+            background-color: rgba(0, 0, 0, 0.43);
+        }
+    };
+
+    .carousel-control-prev, .carousel-control-next {
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.74);
+        };
+    };
+};
+
+.product {
+    .product_item {
+        text-align: center;
+        margin: 40px 0;
+        h2 {
+            margin-bottom: 30px;
+        };
+        img {
+            width: 100%;
+            padding: 10px;
+        };
+
+        a {
+            text-decoration: none;
+            color: $color_balck;
+            font-size: $fs_title_1;            
+            padding: 10px 5px;
+        };
+    };
+
+    .item_content:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .banner {
+        text-align: center;
+        h2 {
+            font-size: $fs_title_2;
+            margin-bottom: 13px;
+        };
+        .banner_item {
+            padding: 10px;
+            img {
+                width: 100%;
+            }
+            .item {
+                padding: 10px 20px;
+                .btn {
+                    padding: 10px 20px;
+                    background-color: rgb(0, 0, 0);
+                    font-weight: $fw_bold;
+                    margin-bottom: 15px;
+                };
+                .btn:hover {
+                    background-color: rgba(0, 0, 0, 0.43);
+                }
+            };
+        };
+
+    };
+
+    .banner_item:hover {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    };
+
+    .news {
+        img {
+            width: 100%;
+        };
+    };
+
+    .feedback {
+        .content_item {
+            margin-bottom: 25px;
+            position: relative;
+            .overlay {
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.407);
+                .overlay_item {
+                    position: absolute;
+                    top: 35%;
+                    left: 35%;
+                    width: 50%;
+                    height: 50%;
+                    background-color: rgba(249, 243, 243, 0);
+                    i {
+                        position: absolute;
+                        left: 35%;
+                        top: -20%;
+                        display: flex;
+                        text-align: center;
+                        font-size: $fs_title_2;
+                        font-weight: $fw_bold;
+                    }
+
+                    .btn {
+                        padding: 10px 20px;
+                        background-color: rgb(0, 0, 0);
+                        font-weight: $fw_bold;
+                        color: $color_white;
+                    };
+                    .btn:hover {
+                        background-color: rgba(0, 0, 0, 0.43);
+                    }
+
+                };
+            };
+        };
+
+        .content_item:hover .overlay {
+            opacity: 1;
+        }
+    };
+};
+
+.letter {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #EFF0F2;
+
+    .letter_content {
+        padding-left: 40px;
+        
+        h2 {
+            font-size: $fs_content;
+        };
+
+        a {
+            text-decoration: underline;
+            color: $color_balck;
+        };
+    };
+};
+
