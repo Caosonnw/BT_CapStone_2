@@ -45,64 +45,6 @@ function filterAddresses() {
     }
   }
 }
-// async function hienThiChiTietGiay() {
-//   try {
-//     const id = 12;
-//     const apiUrl = `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`;
-//     const response = await fetch(apiUrl);
-//     const data = await response.json();
-
-//     const breadcrumbItem = document.querySelector(".breadcrumb-item.active");
-//     breadcrumbItem.textContent = data.content.name;
-
-//     document.querySelector(".product_title").textContent = data.content.name;
-//     document.querySelector(".product_price").textContent =
-//       data.content.price + ",000đ";
-
-//     const productImg = document.getElementById("productImage");
-//     productImg.src = data.content.image;
-//     productImg.alt = data.content.name;
-
-//     const sizeContainer = document.querySelector(".product_size");
-//     sizeContainer.innerHTML = "";
-
-//     data.content.size.forEach((size) => {
-//       const label = document.createElement("label");
-//       label.setAttribute("for", `size-${size}`);
-
-//       const input = document.createElement("input");
-//       input.setAttribute("type", "radio");
-//       input.setAttribute("name", "size");
-//       input.setAttribute("id", `size-${size}`);
-//       input.setAttribute("value", size);
-
-//       const span = document.createElement("span");
-//       span.textContent = size;
-
-//       label.appendChild(input);
-//       label.appendChild(span);
-
-//       sizeContainer.appendChild(label);
-//     });
-//     const carouselItems = document.querySelectorAll(
-//       ".carousel-inner .carousel-item img"
-//     );
-//     carouselItems.forEach((item, index) => {
-//       item.src = data.content.image;
-//       item.alt = `Giày Trắng ${index + 1}`;
-//     });
-//     const carouselIndicators = document.querySelectorAll(
-//       ".carousel-indicators button img"
-//     );
-//     carouselIndicators.forEach((indicator, index) => {
-//       indicator.src = data.content.image;
-//       indicator.alt = `Giày Trắng ${index + 1}`;
-//     });
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-// hienThiChiTietGiay();
 
 async function hienThiChiTietGiay(productId) {
   try {
