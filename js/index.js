@@ -39,7 +39,6 @@ function displayProductInfo(products) {
     const viewDetailsButton = document.createElement('button');
     viewDetailsButton.textContent = 'Xem chi tiết sản phẩm';
     viewDetailsButton.addEventListener('click', () => {
-      // Chuyển hướng đến trang detail.html với query parameter 'id'
       window.location.href = `http://127.0.0.1:5500/view/detail/detail.html?id=${product.id}`;
     });
 
@@ -59,5 +58,4 @@ async function displayProducts() {
   displayProductInfo(products);
 }
 
-// Gọi hàm để hiển thị sản phẩm khi trang được tải
 displayProducts();

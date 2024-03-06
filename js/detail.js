@@ -114,7 +114,7 @@ async function hienThiChiTietGiay(productId) {
     breadcrumbItem.textContent = data.content.name;
 
     document.querySelector(".product_title").textContent = data.content.name;
-    document.querySelector(".product_price").textContent =
+    document.querySelector(".product_price").textContent = "Price: " +
       data.content.price + ",000đ";
 
     const productImg = document.getElementById("productImage");
@@ -367,3 +367,4 @@ function renderGiayNew(arr) {
 }
 
 getAllGiay()
+
